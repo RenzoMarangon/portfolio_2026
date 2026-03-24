@@ -58,16 +58,6 @@ export const projects: Project[] = [
     img: bolucompras,
     skills: ["React", "Sass", "Firebase"],
   },
-
-  {
-    title: "BnBuddy",
-    description:
-      "Sitio web de app para guías digitales de turismo para tus huéspedes",
-    href: "https://bnbuddy.netlify.app/",
-    githubUrl: "https://github.com/RenzoMarangon/AirBNB",
-    img: bnbuddy,
-    skills: ["React", "Bootstrap", "JavaScript"],
-  },
   {
     title: "Naval Electric",
     description:
@@ -76,33 +66,5 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/RenzoMarangon/naval-electric",
     img: navalelectric,
     skills: ["HTML", "Sass", "JavaScript"],
-  },
-  {
-    title: "Vanilla JS Store | ecommerce",
-    description:
-      "Pseudo ecommerce creado con vanilla JS, con funcionalidades de busqueda y carrito de compras",
-    href: "https://ecommercevainillajs.netlify.app/",
-    githubUrl: "https://github.com/RenzoMarangon/e-commerce_vanillaJS",
-    img: vanillastore,
-    skills: ["JavaScript", "Sass"],
-  },
-  {
-    title: "Guía de Flexbox",
-    description:
-      "Guía interactiva realizada para curso de introduccion al desarrollo web, consiste en una guía interactiva de Flexbox con ejemplos y ejercicios prácticos",
-    href: "https://introduccion-a-flexbox.netlify.app/",
-    githubUrl:
-      "https://github.com/RenzoMarangon/clases-desarrollo-web/tree/main/proyecto%20-%2004%20-%20flex-box",
-    img: introduccionaflexbox,
-    skills: ["HTML", "JavaScript", "Bootstrap"],
-  },
-  {
-    title: "CryptoJuegos",
-    description:
-      "Proyecto final realizado para curso de introducción al desarrollo web, consiste en un sitio web de juegos de azar con temática de criptomonedas",
-    href: "https://cryptojuegos.netlify.app/",
-    githubUrl: "https://github.com/cryptojuegos",
-    img: cryptojuegos,
-    skills: ["HTML", "CSS", "JavaScript"],
   },
 ];

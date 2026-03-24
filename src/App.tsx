@@ -4,6 +4,7 @@ import { TooltipProvider } from "./components/ui/tooltip";
 import { About } from "./Sections/About";
 import { Projects } from "./Sections/Projects";
 import { Toaster } from "sonner";
+import { Skills } from "./Sections/Skills";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Navbar />
         <About />
         <Projects />
+        <Skills />
         <Toaster />
       </TooltipProvider>
     </>

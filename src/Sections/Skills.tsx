@@ -1,0 +1,45 @@
+import { Container } from "@/components/Container";
+import { Section } from "@/components/Section";
+import type { Skill } from "@/assets/skillsIcons";
+import { skillsIcons } from "@/assets/skillsIcons";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+export const Skills = () => {
+  return (
+    <Section>
+      <Container className=" p-4 rounded-lg bg-white shadow-md mt-4">
+        <h2 className="text-2xl font-bold mb-6">Habilidades</h2>
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          className="w-full max-w-6xl mx-auto">
+          <CarouselContent className="">
+            {Object.keys(skillsIcons).map((skill) => {
+              const Icon = skillsIcons[skill as Skill];
+
+              if (!Icon) return null;
+
+              return (
+                <CarouselItem className="basis-1/3 sm:basis-1/4 lg:basis-1/6 ml-0.5 -mr-1 pb-0.5">
+                  <div key={skill} className="flex flex-col items-center">
+                    <Icon className="text-4xl mb-2" />
+                    <p className="text-center">{skill}</p>
+                  </div>
+                </CarouselItem>
+              );
+            })}
+          </CarouselContent>
+          <CarouselPrevious className="-left-2 sm:flex sm:left-0 md:-left-4 lg:-left-5" />
+          <CarouselNext className="-right-2 sm:flex sm:right-0 md:-right-4 lg:-right-5" />
+        </Carousel>
+      </Container>
+    </Section>
+  );
+};

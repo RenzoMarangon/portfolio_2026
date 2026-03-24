@@ -31,7 +31,7 @@ export const About = () => {
         <div>
           <div className="flex flex-col gap-4">
             <h2 className="text-xl font-bold">Renzo Marangon</h2>
-            <h3 className="font-semibold">Backend-Oriented Developer</h3>
+            <h3 className="font-semibold">Backend Developer</h3>
             <p>
               Desarrollador orientado a backend, estudiante avanzado de la
               Tecnicatura en Programación (UTN FRGP) y profesor superior en
@@ -47,7 +47,7 @@ export const About = () => {
               target="_blank"
               rel="noopener noreferrer">
               <TooltipHover skill="LinkedIn">
-                <FaLinkedin />
+                <FaLinkedin className="mt-0.5" />
               </TooltipHover>
             </a>
             <a
@@ -55,16 +55,21 @@ export const About = () => {
               target="_blank"
               rel="noopener noreferrer">
               <TooltipHover skill="GitHub">
-                <FaGithub />
+                <FaGithub className="mt-0.5" />
               </TooltipHover>
             </a>
 
-            <button
-              onClick={handleCopy}
-              className="text-left text-base flex items-center gap-2 rounded-md border-1 px-2 hover:bg-gray-200 transition-colors">
-              Renzomarangon@gmail.com
-              <Copy className="w-4 h-4" />
-            </button>
+            <div className="flex items-center">
+              <p className="text-left text-base flex items-center gap-2 px-2">
+                renzomarangon@gmail.com
+              </p>
+              <TooltipHover skill="Copiar email">
+                <Copy
+                  onClick={handleCopy}
+                  className=" rounded-md border-1 px-2 hover:bg-gray-200 transition-colors w-8 h-8"
+                />
+              </TooltipHover>
+            </div>
           </div>
         </div>
       </Container>

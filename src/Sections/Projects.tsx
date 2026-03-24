@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { projects } from "../assets/projects";
 import type { Project } from "../assets/projects";
 import type { Skill } from "../assets/skillsIcons";
+import { skillsIcons } from "@/assets/skillsIcons";
+import { TooltipHover } from "@/components/TooltipHover";
 
 import {
   Card,
@@ -22,9 +24,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
-import { TooltipHover } from "@/components/TooltipHover";
-import { skillsIcons } from "@/assets/skillsIcons";
 
 export const Projects = () => {
   return (
