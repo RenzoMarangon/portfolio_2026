@@ -1,13 +1,15 @@
 import "./App.css";
 import { Navbar } from "./components/Navbar";
+import { TooltipProvider } from "./components/ui/tooltip";
+import { Projects } from "./Sections/Projects";
 
 function App() {
   return (
     <>
-      <div>
+      <TooltipProvider>
         <Navbar />
-        <h1 className="">Portfolio 2026</h1>
-      </div>
+        <Projects />
+      </TooltipProvider>
     </>
   );
 }

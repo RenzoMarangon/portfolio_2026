@@ -16,10 +16,9 @@ const Links = [
     href: "/",
     label: "Inicio",
   },
-  { href: "/about", label: "Sobre mi" },
+  { href: "/projects", label: "Proyectos" },
   { href: "/skills", label: "Habilidades" },
-  { href: "/experience", label: "Experiencia" },
-  { href: "/studies", label: "Estudios" },
+  { href: "/cv", label: "Currículum" },
   { href: "/contact", label: "Contacto" },
 ];
 
