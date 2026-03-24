@@ -29,8 +29,8 @@ import { skillsIcons } from "@/assets/skillsIcons";
 export const Projects = () => {
   return (
     <Section>
-      <Container>
-        <h2 className="text-3xl font-bold mb-6">Proyectos</h2>
+      <Container className="p-4 rounded-lg bg-white shadow-md mt-4">
+        <h2 className="text-2xl font-bold mb-6">Proyectos</h2>
 
         <Carousel
           opts={{
@@ -90,8 +90,8 @@ export const Projects = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="-left-2 sm:flex sm:left-0 md:-left-4 lg:-left-10" />
-          <CarouselNext className="-right-2 sm:flex sm:right-0 md:-right-4 lg:-right-10" />
+          <CarouselPrevious className="-left-2 sm:flex sm:left-0 md:-left-4 lg:-left-5" />
+          <CarouselNext className="-right-2 sm:flex sm:right-0 md:-right-4 lg:-right-5" />
         </Carousel>
       </Container>
     </Section>

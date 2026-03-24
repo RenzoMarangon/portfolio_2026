@@ -8,7 +8,7 @@ import {
   drivecar,
   bolucompras,
   vanillastore,
-} from "./projects/index";
+} from "@/assets/projects/index";
 
 import type { Skill } from "./skillsIcons";
 
@@ -23,15 +23,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Argebas",
-    description:
-      "Landing page realizada para una empresa de alquiler de fotocopiadoras",
-    href: "https://argebas.netlify.app/",
-    githubUrl: "https://github.com/RenzoMarangon/Argebas",
-    img: argebas,
-    skills: ["React", "TailwindCSS", "TypeScript"],
-  },
-  {
     title: "DriveCar App | Concesionaria de autos",
     description:
       "Aplicación web creada como proyecto final para Progamación III. Es una app de concesionaria de autos, con funcionalidades de búsqueda, filtrado y detalles de cada vehículo, conectada con SqlServer para la gestión de datos",
@@ -39,6 +30,15 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/RenzoMarangon/TP_Final_PrograIII_DriveCar",
     img: drivecar,
     skills: ["C#", "SQL Server", "ASP.NET"],
+  },
+  {
+    title: "Argebas",
+    description:
+      "Landing page realizada para una empresa de alquiler de fotocopiadoras",
+    href: "https://argebas.netlify.app/",
+    githubUrl: "https://github.com/RenzoMarangon/Argebas",
+    img: argebas,
+    skills: ["React", "TailwindCSS", "TypeScript"],
   },
   {
     title: "Proyecto Portfolio | UTN",
