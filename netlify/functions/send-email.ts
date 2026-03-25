@@ -1,9 +1,9 @@
 import type { Handler } from "@netlify/functions";
 import { getClientIp } from "../lib/getClientIp";
 import { ratelimit } from "../lib/rateLimit";
-import { sendEmail } from "netlify/lib/email";
-import { contactSchema } from "@/schemas/contactSchema";
-import { sanitize } from "netlify/lib/sanitize";
+import { sendEmail } from "../lib/email";
+import { contactSchema } from "../lib/contactSchema";
+import { sanitize } from "../lib/sanitize";
 
 export const handler: Handler = async (event) => {
   try {
