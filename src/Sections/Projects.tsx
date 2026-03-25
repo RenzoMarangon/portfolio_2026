@@ -10,7 +10,6 @@ import { TooltipHover } from "@/components/TooltipHover";
 
 import {
   Card,
-  CardAction,
   CardDescription,
   CardFooter,
   CardHeader,

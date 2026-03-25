@@ -1,13 +1,9 @@
 import {
   argebas,
-  introduccionaflexbox,
-  cryptojuegos,
   navalelectric,
-  bnbuddy,
   porfoliofantasia,
   drivecar,
   bolucompras,
-  vanillastore,
 } from "@/assets/img/projects/index";
 
 import type { Skill } from "./skillsIcons";
