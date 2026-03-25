@@ -1,7 +1,7 @@
 /// <reference types="node" />
 
 import { Resend } from "resend";
-import type { ContactFormData } from "@/schemas/contactSchema";
+import type { ContactFormData } from "../../src/schemas/contactSchema";
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
