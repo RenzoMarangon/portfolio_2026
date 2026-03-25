@@ -1,5 +1,5 @@
 import type { Handler } from "@netlify/functions";
-import { contactSchema } from "../../../src/schemas/contactSchema";
+import { contactSchema } from "../../src/schemas/contactSchema";
 import { sendEmail } from "../lib/email";
 
 export const handler: Handler = async (event) => {
