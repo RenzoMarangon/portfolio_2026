@@ -1,5 +1,3 @@
-import DOMPurify from "isomorphic-dompurify";
-
 export function sanitize(input: string) {
-  return DOMPurify.sanitize(input);
+  return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
