@@ -1,6 +1,6 @@
 import type { Handler } from "@netlify/functions";
 import { getClientIp } from "../lib/getClientIp";
-import { ratelimit } from "../lib/ratelimit";
+import { ratelimit } from "../lib/rateLimit";
 
 export const handler: Handler = async (event) => {
   try {
