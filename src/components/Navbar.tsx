@@ -29,7 +29,7 @@ export const Navbar = () => {
         {/* LOGO */}
         <h1>
           <a href="/" className="flex gap-2">
-            <img src="" alt="Logo" />
+            <img src="./none" alt="Logo" />
             <span className="">Portfolio | Renzo Marangon</span>
           </a>
         </h1>

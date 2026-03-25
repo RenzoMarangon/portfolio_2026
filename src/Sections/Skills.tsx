@@ -13,7 +13,7 @@ import {
 export const Skills = () => {
   return (
     <Section>
-      <Container className=" p-4 rounded-lg bg-white shadow-md mt-4">
+      <Container className=" p-4 pb-6 rounded-lg bg-white shadow-md mt-4">
         <h2 className="text-2xl font-bold mb-6">Habilidades</h2>
         <Carousel
           opts={{
@@ -27,8 +27,10 @@ export const Skills = () => {
               if (!Icon) return null;
 
               return (
-                <CarouselItem className="basis-1/3 sm:basis-1/4 lg:basis-1/6 ml-0.5 -mr-1 pb-0.5">
-                  <div key={skill} className="flex flex-col items-center">
+                <CarouselItem
+                  key={skill}
+                  className="basis-1/3 sm:basis-1/4 lg:basis-1/6 ml-0.5 -mr-1 pb-0.5">
+                  <div className="flex flex-col items-center">
                     <Icon className="text-4xl mb-2" />
                     <p className="text-center">{skill}</p>
                   </div>

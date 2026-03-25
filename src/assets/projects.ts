@@ -8,7 +8,7 @@ import {
   drivecar,
   bolucompras,
   vanillastore,
-} from "@/assets/projects/index";
+} from "@/assets/img/projects/index";
 
 import type { Skill } from "./skillsIcons";
 

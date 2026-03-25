@@ -5,6 +5,7 @@ import { About } from "./Sections/About";
 import { Projects } from "./Sections/Projects";
 import { Toaster } from "sonner";
 import { Skills } from "./Sections/Skills";
+import { Contact } from "./Sections/Contact";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <About />
         <Projects />
         <Skills />
+        <Contact />
         <Toaster />
       </TooltipProvider>
     </>
