@@ -18,11 +18,14 @@ export const handler: Handler = async (event) => {
     }
 
     // DEBUG LOG
-    console.log({
-      ip,
-      limit,
-      remaining,
-    });
+    console.log(
+      {
+        ip,
+        limit,
+        remaining,
+      },
+      event.headers,
+    );
 
     // ⚠️ acá todavía NO hacemos nada más (email, etc.)
     // solo probamos que el rate limit funcione
