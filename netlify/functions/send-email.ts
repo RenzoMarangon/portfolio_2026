@@ -5,6 +5,14 @@ import { sendEmail } from "../lib/email";
 import { contactSchema } from "../lib/contactSchema";
 import { sanitize } from "../lib/sanitize";
 
+//type para la respuesta de Cloudflare Turnstile
+type TurnstileResponse = {
+  success: boolean;
+  challenge_ts?: string;
+  hostname?: string;
+  "error-codes"?: string[];
+};
+
 export const handler: Handler = async (event) => {
   try {
     //Parseo el body
@@ -52,7 +60,7 @@ export const handler: Handler = async (event) => {
       },
     );
 
-    const verifyData = await verifyRes.json();
+    const verifyData = (await verifyRes.json()) as TurnstileResponse;
 
     if (!verifyData.success) {
       return {
