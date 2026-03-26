@@ -13,6 +13,8 @@ export const contactSchema = z.object({
     .string()
     .min(10, "Mensaje muy corto")
     .max(1000, "Mensaje muy largo"),
+
+  token: z.string().min(1, "Captcha requerido"),
 });
 
 export type ContactSchema = z.infer<typeof contactSchema>;

@@ -30,7 +30,36 @@ export const handler: Handler = async (event) => {
       };
     }
 
-    let { nombre, asunto, mensaje } = parsed.data;
+    let { nombre, asunto, mensaje, token } = parsed.data;
+
+    //Captcha
+    if (!token) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: "Captcha requerido" }),
+      };
+    }
+
+    //Verifico captcha con Cloudflare
+    const verifyRes = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        body: new URLSearchParams({
+          secret: process.env.TURNSTILE_SECRET!,
+          response: token,
+        }),
+      },
+    );
+
+    const verifyData = await verifyRes.json();
+
+    if (!verifyData.success) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: "Captcha inválido" }),
+      };
+    }
 
     //Sanitize
     nombre = sanitize(nombre);
@@ -40,6 +69,12 @@ export const handler: Handler = async (event) => {
     //Rate limit
     const ip = getClientIp(event.headers);
     const { success } = await ratelimit.limit(ip);
+
+    //Debug logging
+    console.log({
+      ip,
+      captcha: verifyData.success,
+    });
 
     if (!success) {
       return {

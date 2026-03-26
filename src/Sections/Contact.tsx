@@ -29,6 +29,7 @@ export const Contact = () => {
     },
   });
 
+  const [loading, setLoading] = useState(false);
   //TOKEN
   const [token, setToken] = useState<string | null>(null);
 
@@ -40,8 +41,10 @@ export const Contact = () => {
     }
 
     try {
+      setLoading(true);
       await axios.post("/.netlify/functions/send-email", { ...data, token });
       toast.success("Mensaje enviado");
+      setLoading(false);
       form.reset();
       setToken(null);
     } catch (error) {
@@ -116,10 +119,12 @@ export const Contact = () => {
                 sitekey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
                 onVerify={(t) => setToken(t)}
               />
+
               <Button
+                disabled={loading}
                 type="submit"
                 className="p-4 cursor-pointer hover:bg-slate-600 transition-colors">
-                Enviar
+                {loading ? "Enviando..." : "Enviar"}
               </Button>
             </Field>
           </FieldGroup>
