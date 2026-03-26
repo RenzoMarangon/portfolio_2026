@@ -16,6 +16,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import { toast } from "sonner";
 
+import Turnstile from "react-turnstile";
+import { useState } from "react";
+
 export const Contact = () => {
   const form = useForm({
     resolver: zodResolver(contactSchema),
@@ -26,15 +29,26 @@ export const Contact = () => {
     },
   });
 
+  //TOKEN
+  const [token, setToken] = useState<string | null>(null);
+
   const onSubmit = async (data: ContactFormData) => {
+    //Si viene sin el token, no se envía el formulario
+    if (!token) {
+      toast.error("Completá el captcha");
+      return;
+    }
+
     try {
-      await axios.post("/.netlify/functions/send-email", data);
+      await axios.post("/.netlify/functions/send-email", { ...data, token });
       toast.success("Mensaje enviado");
       form.reset();
+      setToken(null);
     } catch (error) {
       toast.error("Error al enviar el mensaje");
     }
   };
+
   return (
     <Section>
       <Container className="p-4 rounded-lg bg-white shadow-md mt-4">
@@ -98,6 +112,10 @@ export const Contact = () => {
             </FieldSet>
 
             <Field orientation="horizontal" className="justify-end">
+              <Turnstile
+                sitekey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+                onVerify={(t) => setToken(t)}
+              />
               <Button
                 type="submit"
                 className="p-4 cursor-pointer hover:bg-slate-600 transition-colors">

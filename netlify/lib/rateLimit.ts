@@ -10,6 +10,6 @@ const redis = new Redis({
 // Configuración del rate limit
 export const ratelimit = new Ratelimit({
   redis,
-  limiter: Ratelimit.slidingWindow(5, "10 m"), // 5 requests cada 10 minutos
+  limiter: Ratelimit.slidingWindow(3, "30 m"), // 3 requests cada 30 minutos
   analytics: true,
 });
