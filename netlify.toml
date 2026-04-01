@@ -2,3 +2,15 @@
   command = "bun install && bun run build"
   publish = "dist"
   functions = "netlify/functions"
+
+[[headers]]
+for = "/*"
+[headers.values]
+  Content-Security-Policy = """
+    default-src 'self';
+    script-src 'self' https://challenges.cloudflare.com;
+    connect-src 'self' https://challenges.cloudflare.com;
+    img-src 'self' data:;
+    style-src 'self' 'unsafe-inline';
+    frame-src https://challenges.cloudflare.com;
+  """

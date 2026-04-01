@@ -26,7 +26,7 @@ import {
 
 export const Projects = () => {
   return (
-    <Section>
+    <Section id="projects">
       <Container className="p-4 rounded-lg bg-white shadow-md mt-4">
         <h2 className="text-2xl font-bold mb-6">Proyectos</h2>
 

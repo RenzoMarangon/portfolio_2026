@@ -8,24 +8,42 @@ import {
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFirebase } from "react-icons/io5";
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaHtml5 } from "react-icons/fa";
-import { TbBrandCSharp } from "react-icons/tb";
+import { FaHtml5, FaNodeJs } from "react-icons/fa";
+import { TbBrandCSharp, TbFileTypeSql } from "react-icons/tb";
 import { FaSquareJs } from "react-icons/fa6";
-import { SiDotnet } from "react-icons/si";
+import { SiDotnet, SiNestjs, SiPostgresql } from "react-icons/si";
 
 export const skillsIcons = {
-  React: DiReact,
-  TailwindCSS: RiTailwindCssFill,
-  TypeScript: BiLogoTypescript,
-  Bootstrap: DiBootstrap,
-  CSS: DiCss3,
-  JavaScript: FaSquareJs,
-  Sass: DiSass,
-  "SQL Server": DiMsqlServer,
-  Firebase: IoLogoFirebase,
-  HTML: FaHtml5,
   "C#": TbBrandCSharp,
   "ASP.NET": SiDotnet,
+  SQL: TbFileTypeSql,
+  NodeJS: FaNodeJs,
+  PostgreSQL: SiPostgresql,
+  "SQL Server": DiMsqlServer,
+  TypeScript: BiLogoTypescript,
+  NestJS: SiNestjs,
+  React: DiReact,
+  Firebase: IoLogoFirebase,
+  JavaScript: FaSquareJs,
+  TailwindCSS: RiTailwindCssFill,
+  Bootstrap: DiBootstrap,
+  Sass: DiSass,
+  CSS: DiCss3,
+  HTML: FaHtml5,
+};
+
+export const skillsToShow = {
+  "C#": TbBrandCSharp,
+  "ASP.NET": SiDotnet,
+  "SQL Server": DiMsqlServer,
+  TypeScript: BiLogoTypescript,
+  NodeJS: FaNodeJs,
+  PostgreSQL: SiPostgresql,
+  NestJS: SiNestjs,
+  Firebase: IoLogoFirebase,
+  React: DiReact,
 };
 
 export type Skill = keyof typeof skillsIcons;
+
+export type SkillToShow = keyof typeof skillsToShow;

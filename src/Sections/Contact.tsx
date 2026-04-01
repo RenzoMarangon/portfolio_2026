@@ -53,7 +53,7 @@ export const Contact = () => {
   };
 
   return (
-    <Section>
+    <Section id="contact">
       <Container className="p-4 rounded-lg bg-white shadow-md mt-4">
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <FieldGroup>

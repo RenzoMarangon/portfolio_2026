@@ -1,7 +1,7 @@
 import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
-import type { Skill } from "@/assets/skillsIcons";
-import { skillsIcons } from "@/assets/skillsIcons";
+import type { SkillToShow } from "@/assets/skillsIcons";
+import { skillsToShow } from "@/assets/skillsIcons";
 import {
   Carousel,
   CarouselContent,
@@ -12,7 +12,7 @@ import {
 
 export const Skills = () => {
   return (
-    <Section>
+    <Section id="skills">
       <Container className=" p-4 pb-6 rounded-lg bg-white shadow-md mt-4">
         <h2 className="text-2xl font-bold mb-6">Habilidades</h2>
         <Carousel
@@ -21,8 +21,8 @@ export const Skills = () => {
           }}
           className="w-full max-w-6xl mx-auto">
           <CarouselContent className="">
-            {Object.keys(skillsIcons).map((skill) => {
-              const Icon = skillsIcons[skill as Skill];
+            {Object.keys(skillsToShow).map((skill) => {
+              const Icon = skillsToShow[skill as SkillToShow];
 
               if (!Icon) return null;
 

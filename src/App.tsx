@@ -11,7 +11,9 @@ function App() {
   return (
     <>
       <TooltipProvider>
-        <Navbar />
+        <header className="fixed top-0 z-50 w-full ">
+          <Navbar />
+        </header>
         <About />
         <Projects />
         <Skills />

@@ -9,25 +9,27 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+import rm_logo from "@/assets/img/rm_logo.png";
+
 const Links = [
   {
-    href: "/",
+    href: "#",
     label: "Inicio",
   },
-  { href: "/projects", label: "Proyectos" },
-  { href: "/skills", label: "Habilidades" },
-  { href: "/cv", label: "Currículum" },
-  { href: "/contact", label: "Contacto" },
+  { href: "#projects", label: "Proyectos" },
+  { href: "#skills", label: "Habilidades" },
+  { href: "#cv", label: "Currículum" },
+  { href: "#contact", label: "Contacto" },
 ];
 
 export const Navbar = () => {
   return (
-    <nav className="backdrop-blur-md shadow-sm">
+    <nav className="backdrop-blur-md shadow-sm ">
       <Container className="flex h-16 items-center justify-between">
         {/* LOGO */}
         <h1>
-          <a href="/" className="flex gap-2">
-            <img src="./none" alt="Logo" />
+          <a href="#" className="flex gap-2 items-center">
+            <img src={rm_logo} alt="Logo" className="h-8 rounded-full" />
             <span className="">Portfolio | Renzo Marangon</span>
           </a>
         </h1>

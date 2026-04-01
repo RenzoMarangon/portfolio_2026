@@ -20,7 +20,7 @@ const handleCopy = async () => {
 
 export const About = () => {
   return (
-    <Section>
+    <Section className="mt-16 lg:mt-18">
       <Container className="flex flex-col md:flex-row gap-8 pb-4 md:pb-0 pt-4 rounded-t-none md:rounded-t-lg rounded-lg bg-white shadow-md md:mt-4">
         <img
           src={profile}

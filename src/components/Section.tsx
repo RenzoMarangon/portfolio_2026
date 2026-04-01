@@ -1,13 +1,13 @@
 type SectionProps = {
   children: React.ReactNode;
   className?: string;
-  Id?: string;
+  id?: string;
 };
 
-export const Section = ({ children, className, Id }: SectionProps) => {
+export const Section = ({ children, className, id }: SectionProps) => {
   return (
-    <div id={Id} className={className}>
+    <section id={id} className={className}>
       {children}
-    </div>
+    </section>
   );
 };
