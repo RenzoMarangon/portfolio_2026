@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/sheet";
 
 import rm_logo from "@/assets/img/rm_logo.png";
+import { TooltipHover } from "./TooltipHover";
+import { Download } from "lucide-react";
 
 const Links = [
   {
@@ -65,13 +67,17 @@ export const Navbar = () => {
                       <span className="sr-only">
                         Portfolio | Renzo Marangon
                       </span>
-                      <img src="" alt="Logo" />
+                      <img
+                        src={rm_logo}
+                        alt="Logo"
+                        className="h-8 rounded-full"
+                      />
                     </a>
                   </h1>
                 </SheetTitle>
               </SheetHeader>
 
-              <ul className="flex flex-col gap-2 ml-4">
+              <ul className="flex flex-1 flex-col items-start gap-2 ml-4 h-full">
                 {Links.map((l) => (
                   <li key={l.href}>
                     <SheetClose asChild>
@@ -81,6 +87,24 @@ export const Navbar = () => {
                     </SheetClose>
                   </li>
                 ))}
+
+                <li className="mt-auto mb-8">
+                  <div className="block lg:hidden">
+                    <TooltipHover skill="Descargar currículum.pdf">
+                      <Button
+                        asChild //Permite que el botón se comporte como una etiqueta <a> sin romper el HTML
+                        variant="outline"
+                        className="gap-2 font-medium">
+                        <a
+                          href="/Renzo_Marangon_CV.pdf"
+                          download="Renzo_Marangon_CV.pdf">
+                          <Download className="h-4 w-4" /> {/* Ícono */}
+                          Descargar CV
+                        </a>
+                      </Button>
+                    </TooltipHover>
+                  </div>
+                </li>
               </ul>
             </SheetContent>
           </Sheet>

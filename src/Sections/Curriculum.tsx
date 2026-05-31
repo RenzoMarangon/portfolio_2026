@@ -1,3 +1,10 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
 import { Separator } from "@/components/ui/separator";
@@ -9,30 +16,41 @@ export const Curriculum = () => {
         <h2 className="text-2xl font-bold">Currículum</h2>
 
         {/* XP LABORAL */}
-        <div className=" rounded shadow-gray-50 shadow-xl px-6 py-3">
-          <h4 className="text-lg font-medium  mb-1">Experiencia laboral</h4>
 
-          <div className="ml-2 flex flex-col">
-            <p className="text-md font-medium">
-              Magazzino S.A. | Catalogador de ecommerce
-            </p>
-            <p className="flex flex-col text-md font-light ml-2">
-              Freelance | Septiembre 2025 - Febrero 2026
-              <span className="ml-2 pl-3 -indent-3 md:pl-0 md:indent-0">
+        <h4 className="text-lg font-medium ml-2 mt-2">Experiencia laboral</h4>
+        <Accordion
+          type="single"
+          collapsible
+          defaultValue="nexina"
+          className="rounded shadow-gray-50 shadow-xl px-6 py-3">
+          <AccordionItem
+            value="magazzino"
+            className=" flex flex-col text-md font-medium border-none">
+            <p className="">Magazzino S.A. | Catalogador de ecommerce</p>
+            <AccordionTrigger className=" text-md font-light ml-2 p-0">
+              <p className="">Freelance | Septiembre 2025 - Febrero 2026</p>
+            </AccordionTrigger>
+
+            <AccordionContent className=" font-light text-sm ml-2 pl-3 -indent-3 md:pl-0 md:indent-0 pb-0 ">
+              <span className="">
                 - Gestión y optimización de publicaciones en Mercado Libre,
                 Vtex, WooCommerce.
               </span>
-            </p>
-          </div>
+            </AccordionContent>
+          </AccordionItem>
 
           <Separator className="my-4 opacity-50" />
 
-          <div className="ml-2 flex flex-col">
+          <AccordionItem
+            value="nexina"
+            className=" flex flex-col text-md font-medium border-none">
             <p className="text-md font-medium">
               Nexina S.A. | Analista de ecommerce
             </p>
-            <p className="flex flex-col text-md font-light ml-2">
+            <AccordionTrigger className=" text-md font-light ml-2 p-0">
               Benavidez | Julio 2024 - Junio 2025
+            </AccordionTrigger>
+            <AccordionContent className="flex flex-col font-light text-sm ml-2 mb-0 -indent-3 md:pl-0 md:indent-0 pb-0">
               <span className="ml-2 pl-3 -indent-3 md:pl-0 md:indent-0">
                 - Gestión y optimización de publicaciones en Mercado Libre,
                 Vtex, WooCommerce y otras plataformas.
@@ -49,17 +67,21 @@ export const Curriculum = () => {
                 - Implementación de mejoras basadas en métricas que impactaron
                 en la conversión y rotación.
               </span>
-            </p>
-          </div>
+            </AccordionContent>
+          </AccordionItem>
 
           <Separator className="my-4 opacity-50" />
 
-          <div className="ml-2 flex flex-col">
+          <AccordionItem
+            value="eesn28"
+            className=" flex flex-col text-md font-medium border-none">
             <p className="text-md font-medium">
               E.E.S. N°28 | Soporte Técnico Informático
             </p>
-            <p className="flex flex-col text-md font-light ml-2">
+            <AccordionTrigger className=" text-md font-light ml-2 p-0">
               Escobar | Septiembre 2021 - Marzo 2024
+            </AccordionTrigger>
+            <AccordionContent className="flex flex-col font-light text-sm ml-2 pl-3 -indent-3 md:pl-0 md:indent-0 pb-0">
               <span className="ml-2  pl-3 -indent-3 md:pl-0 md:indent-0">
                 - Mantenimiento y reparación de equipos informáticos (hardware y
                 software).
@@ -68,43 +90,51 @@ export const Curriculum = () => {
                 - Gestión de usuarios y carga de datos en sistemas
                 institucionales.
               </span>
-            </p>
-          </div>
+            </AccordionContent>
+          </AccordionItem>
 
           <Separator className="my-4 opacity-50" />
 
-          <div className="ml-2 flex flex-col">
+          <AccordionItem
+            value="serviprof"
+            className=" flex flex-col text-md font-medium border-none">
             <p className="text-md font-medium">
               Serviprof | Catalogador de ecommerce
             </p>
-            <p className="flex flex-col text-md font-light ml-2">
+            <AccordionTrigger className=" text-md font-light ml-2 p-0">
               Garín | Noviembre 2020 - Septiembre 2021
+            </AccordionTrigger>
+            <AccordionContent className="flex flex-col font-light text-sm ml-2 pl-3 -indent-3 md:pl-0 md:indent-0 pb-0">
               <span className="ml-2  pl-3 -indent-3 md:pl-0 md:indent-0">
                 - Gestión y actualización de base de datos de productos.
               </span>
               <span className="ml-2  pl-3 -indent-3 md:pl-0 md:indent-0">
                 - Soporte técnico y mantenimiento de equipos.
               </span>
-            </p>
-          </div>
+            </AccordionContent>
+          </AccordionItem>
 
           <Separator className="my-4 opacity-50" />
 
-          <div className="ml-2 flex flex-col">
+          <AccordionItem
+            value="maxiclima"
+            className=" flex flex-col text-md font-medium border-none">
             <p className="text-md font-medium">
               Maxiclima S.R.L. | Técnico de AA
             </p>
-            <p className="flex flex-col text-md font-light ml-2">
+            <AccordionTrigger className=" text-md font-light ml-2 p-0">
               Enero 2014 | Marzo 2018
+            </AccordionTrigger>
+            <AccordionContent className="flex flex-col font-light text-sm ml-2 pl-3 -indent-3 md:pl-0 md:indent-0 pb-0">
               <span className="ml-2 pl-3 -indent-3 md:pl-0 md:indent-0">
                 - Limpieza y mantenimiento de equipos de aire acondicionado.
               </span>
               <span className="ml-2 pl-3 -indent-3 md:pl-0 md:indent-0">
                 - Instalación de equipos de aire acondicionado.
               </span>
-            </p>
-          </div>
-        </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
 
         {/* EDUCACION */}
 

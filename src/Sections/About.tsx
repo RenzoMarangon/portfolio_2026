@@ -30,8 +30,8 @@ export const About = () => {
           className="w-50 m-auto md:h-60 md:w-auto rounded-lg mb-4"
         />
 
-        <div>
-          <div className="flex flex-col gap-4">
+        <div className="pb-2">
+          <div className="flex flex-col gap-4 ">
             <h2 className="text-xl font-bold">Renzo Marangon</h2>
             <h3 className="font-semibold">Backend Developer</h3>
             <p>
@@ -72,19 +72,22 @@ export const About = () => {
                 />
               </TooltipHover>
             </div>
-            <TooltipHover skill="Descargar currículum.pdf">
-              <Button
-                asChild //Permite que el botón se comporte como una etiqueta <a> sin romper el HTML
-                variant="outline"
-                className="gap-2 font-medium  ">
-                <a
-                  href="/Renzo_Marangon_CV.pdf"
-                  download="Renzo_Marangon_CV.pdf">
-                  <Download className="h-4 w-4" /> {/* Ícono */}
-                  Descargar CV
-                </a>
-              </Button>
-            </TooltipHover>
+
+            <div className="hidden lg:block">
+              <TooltipHover skill="Descargar currículum.pdf">
+                <Button
+                  asChild //Permite que el botón se comporte como una etiqueta <a> sin romper el HTML
+                  variant="outline"
+                  className="gap-2 font-medium">
+                  <a
+                    href="/Renzo_Marangon_CV.pdf"
+                    download="Renzo_Marangon_CV.pdf">
+                    <Download className="h-4 w-4" /> {/* Ícono */}
+                    Descargar CV
+                  </a>
+                </Button>
+              </TooltipHover>
+            </div>
           </div>
         </div>
       </Container>
