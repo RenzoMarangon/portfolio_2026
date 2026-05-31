@@ -1,7 +1,6 @@
 import {
   argebas,
   navalelectric,
-  porfoliofantasia,
   drivecar,
   bolucompras,
 } from "@/assets/img/projects/index";
