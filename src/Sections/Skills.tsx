@@ -12,7 +12,7 @@ import {
 
 export const Skills = () => {
   return (
-    <Section id="skills">
+    <Section id="skills" className="scroll-mt-18">
       <Container className=" p-4 pb-6 rounded-lg bg-white shadow-md mt-4">
         <h2 className="text-2xl font-bold mb-6">Habilidades</h2>
         <Carousel

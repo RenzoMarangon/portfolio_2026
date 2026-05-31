@@ -5,6 +5,8 @@ import { TooltipHover } from "@/components/TooltipHover";
 import profile from "@/assets/img/profile.jpg";
 import { toast } from "sonner";
 import { Copy } from "lucide-react";
+import { Download } from "lucide-react"; // Ícono de descarga de Lucide
+import { Button } from "@/components/ui/button"; // El botón nativo de Shadcn
 
 const email = "renzomarangon@gmail.com";
 
@@ -66,10 +68,23 @@ export const About = () => {
               <TooltipHover skill="Copiar email">
                 <Copy
                   onClick={handleCopy}
-                  className=" rounded-md border-1 px-2 hover:bg-gray-200 transition-colors w-8 h-8"
+                  className=" rounded-md border-1 px-2 hover:bg-gray-200 hover:cursor-pointer transition-colors w-8 h-8"
                 />
               </TooltipHover>
             </div>
+            <TooltipHover skill="Descargar currículum.pdf">
+              <Button
+                asChild //Permite que el botón se comporte como una etiqueta <a> sin romper el HTML
+                variant="outline"
+                className="gap-2 font-medium  ">
+                <a
+                  href="/Renzo_Marangon_CV.pdf"
+                  download="Renzo_Marangon_CV.pdf">
+                  <Download className="h-4 w-4" /> {/* Ícono */}
+                  Descargar CV
+                </a>
+              </Button>
+            </TooltipHover>
           </div>
         </div>
       </Container>

@@ -37,15 +37,6 @@ export const projects: Project[] = [
     skills: ["React", "TailwindCSS", "TypeScript"],
   },
   {
-    title: "Proyecto Portfolio | UTN",
-    description:
-      "Portfolio creado para la materia Programación III de UTN FRGP",
-    href: "https://portfolio-rm-utn.netlify.app/",
-    githubUrl: "https://github.com/RenzoMarangon/portfolio_2025",
-    img: porfoliofantasia,
-    skills: ["HTML", "Bootstrap"],
-  },
-  {
     title: "Bolucompras | ecommerce",
     description:
       "ecommerce funcional creado con React, con login y carrito de compras, conectado con Firebase para la gestión de datos",
